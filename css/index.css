@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Optima";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./OPTIMA.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./Optima_Italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./Optima Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Optima Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./OPTIMA_B.woff") format("woff");
+}
+body {
+  font-family: "Optima", "serif";
+  margin: 20px;
+}
+
+header {
+  background: #1dcba2;
+  color: white;
+  padding: 40px;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+header h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  text-align: center;
+}
+header .premire {
+  font-size: 2.5em;
+}
+header .section {
+  margin: 10px 0;
+}
+header .cover {
+  width: 100%;
+}
+header span {
+  max-width: 800px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.video {
+  background: black;
+  color: white;
+  border-radius: 40px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px gray;
+  transition: transform 250ms ease-in-out;
+  margin-top: 20px;
+}
+.video #counter-label {
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: bold;
+}
+.video #counter {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.video:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 40px;
+}
+.info span {
+  font-size: 1em;
+  margin: 12px 0;
+}
+.info a {
+  border-bottom: solid 2px #1dcba2;
+  padding: 4px;
+  transition: all 250ms ease-in-out;
+  text-decoration: none;
+  color: #1dcba2;
+}
+.info a:hover {
+  cursor: pointer;
+  color: white;
+  background: #1dcba2;
+}
+
+span {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  body {
+    height: calc(100vh - 80px);
+    width: calc(100vw - 80px);
+  }
+
+  header, main {
+    height: 50%;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100%;
+    width: 100%;
+  }
+
+  .cover {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  body {
+    margin: 40px;
+  }
+
+  .video {
+    margin-top: 40px;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .info, .video {
+    width: 50%;
+  }
+
+  .info span {
+    font-size: 1.25em;
+  }
+
+  .info {
+    align-items: flex-end;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
