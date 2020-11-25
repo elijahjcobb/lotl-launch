@@ -39,161 +39,84 @@ $green: rgb(29, 203, 162);
 
 body {
 	font-family: "Optima", "serif";
-	margin: 20px;
 }
 
 header {
-
 	background: $green;
-	color: white;
-	padding: 40px;
-
-	nav {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-	}
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	h1 {
+		color: white;
+		text-align: center;
 		text-transform: uppercase;
-		font-size: 4em;
-		text-align: center;
-	}
-
-	.premire {
-		font-size: 2.5em;
-	}
-
-	.section {
-		margin: 10px 0;
-	}
-
-	.cover {
-		width: 100%;
-	}
-
-	span {
-		max-width: 800px;
 		font-size: 1.5em;
-		text-align: center;
 	}
-}
-
-main {
-
 }
 
 .video {
-	background: black;
-	color: white;
-	border-radius: 40px;
-	padding: 40px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 0 10px gray;
-	transition: transform 250ms ease-in-out;
-	margin-top: 20px;
-
-	#counter-label {
-		text-transform: uppercase;
-		font-size: 3em;
-		font-weight: bold;
-	}
-
-	#counter {
-		font-size: 5em;
-		font-weight: bold;
-	}
+	width: 100%;
+	min-height: 240px;
 }
 
-.video:hover {
-	transform: scale(1.05);
+.info, .description {
+	margin: 20px;
 }
 
-.info {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	padding-right: 40px;
-
-	span {
-		font-size: 1em;
-		margin: 12px 0;
-	}
-
-	a {
-		border-bottom: solid 2px $green;
-		padding: 4px;
-		transition: all 250ms ease-in-out;
-		text-decoration: none;
-		color: $green;
-	}
-
-	a:hover {
-		cursor: pointer;
-		color: white;
-		background: $green;
-	}
+.description {
+	text-align: justify;
 }
 
 span {
 	display: block;
 }
 
-@media (min-width: 800px) {
+.info {
+	display: flex;
+	flex-direction: column;
+}
 
-	body {
-		height: calc(100vh - 80px);
-		width: calc(100vw - 80px);
-	}
+span {
+	margin: 8px 0;
+}
 
-	header, main {
-		height: 50%;
-	}
+a {
+	border-bottom: solid 2px $green;
+	text-decoration: none;
+	color: black;
+	transition: all 250ms ease-in-out;
+}
+
+a:hover {
+	color: white;
+	background: $green;
+}
+
+@media (min-width: 720px) {
 
 	header {
-		display: grid;
-		grid-template-columns: 200px auto;
-		grid-template-rows: 100%;
-		width: 100%;
+
+		padding: 40px;
+
+		h1 {
+			font-size: 3em;
+		}
 	}
 
-	.cover {
-		height: 100%;
-		object-fit: contain;
-	}
-
-	nav {
-		width: 100%;
-	}
-
-	body {
-		margin: 40px;
-	}
-
-	.video {
-		margin-top: 40px;
+	.description {
+		width: 20%;
 	}
 
 	main {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
-	.info, .video {
-		width: 50%;
-	}
-
-	.info span {
-		font-size: 1.25em;
-	}
-
-	.info {
-		align-items: flex-end;
+	.video {
+		width:80%;
+		height: 400px;
 	}
 
 }
